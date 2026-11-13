@@ -26,14 +26,16 @@ const normalize = (text: string): string =>
   text.replace(/[，。；：、“”‘’！？·—…\s]/g, '');
 
 describe('第一集口播稿', () => {
-  it('正文 750–900 字（按汉字计）', () => {
-    expect(hanCount(narration)).toBeGreaterThanOrEqual(750);
-    expect(hanCount(narration)).toBeLessThanOrEqual(900);
+  it('正文 850–1000 字（按汉字计）', () => {
+    expect(hanCount(narration)).toBeGreaterThanOrEqual(850);
+    expect(hanCount(narration)).toBeLessThanOrEqual(1000);
   });
 
-  it('按 8 个故事要点分成 8 节', () => {
-    const sections = afterMeta.match(/^## \d+\. /gm) ?? [];
-    expect(sections).toHaveLength(8);
+  it('按叙事结构分成 9 节，含 1b 礼论', () => {
+    const sections = afterMeta.match(/^## \d+[a-z]?\. /gm) ?? [];
+    expect(sections).toHaveLength(9);
+    expect(afterMeta).toContain('## 1b. 礼论');
+    expect(narration).toContain('先问该不该');
   });
 
   it('稿中每句古文引文都能在 sources.md 找到', () => {
