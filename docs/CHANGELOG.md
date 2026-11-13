@@ -69,3 +69,25 @@
 ### 说明
 
 - 阶段 3 的 schema 只约束分镜结构，不依赖具体文案；2b 无需调整 schema，等新稿确认后继续完成阶段 3 的收尾与提交
+
+## 2026-11-13 — 阶段 3：分镜 schema
+
+### 新增
+
+- `src/schema.ts`：用 zod 定义 7 种镜头（title / quote / map / dialogue / relation / timeline / narration），统一包含旁白、预估时长与进入转场（none / fade / scroll）
+- `src/characters/cast.ts`：第一集 10 个角色的 id 与中文名，供对话镜头和阶段 8 的人物组件共用
+- `src/schema.test.ts`：9 个用例覆盖全部镜头类型、默认值、id 唯一性、说话人、关系图节点、时间轴顺序、地图箭头/吞并、未知字段和越界值
+
+### 设计
+
+- 时间字段：`estimatedDurationInFrames` 仅供 studio 预览；成片时长由阶段 5 配音时间轴决定
+- 地图参数：`focus` 高亮领地、`arrows` 行军箭头、`flood` 涨水、`conquests` 领地易主
+- 关系图：4 个领地节点，连线支持 `changeAt` / `changeTo`，用于“韩魏倒戈”
+- 时间轴：`year` 负数表示公元前，事件必须从早到晚排列
+- 全部对象使用严格模式，拼错的字段会直接报错
+
+### 验证
+
+- `npm run typecheck` 通过
+- `npm test` 通过：4 个测试文件、19 个用例（内容测试已按 2b 新稿更新）
+- schema 不参与渲染；既有静帧 `out/stills/scaffold-preview.png` 已复跑成功

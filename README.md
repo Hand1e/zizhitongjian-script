@@ -71,10 +71,11 @@ src/index.ts                   Remotion 入口，注册 Composition
 src/Root.tsx                   Composition 注册表
 src/video.ts                   画布尺寸 / 帧率 / 秒帧换算
 src/theme.ts                   全片色板（宣纸、墨黑、朱红、赭石、石青）
+src/schema.ts                  分镜 zod schema（7 种镜头、参数、转场）
 src/components/                通用视觉组件（宣纸背景等）
 src/scenes/                    具体镜头
 src/templates/                 可复用镜头模板（阶段 6 起）
-src/characters/                皮影风格人物组件（阶段 8 起）
+src/characters/                皮影风格人物组件（阶段 8 起）与人物表 cast.ts
 scripts/                       TTS、时间轴、渲染检查脚本（阶段 5 起）
 docs/                          变更记录、自查报告、新集制作指南
 out/                           渲染输出（不提交）

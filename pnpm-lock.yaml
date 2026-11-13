@@ -20,6 +20,9 @@ importers:
       remotion:
         specifier: 4.0.543
         version: 4.0.543(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      zod:
+        specifier: 4.6.7
+        version: 4.6.7
     devDependencies:
       '@types/node':
         specifier: 24.19.2

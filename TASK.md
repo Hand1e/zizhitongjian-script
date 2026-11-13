@@ -20,7 +20,7 @@
 - [x] 1. 脚手架：Remotion + TypeScript 项目，1920x1080/30fps，npm scripts（dev/studio、typecheck、test(vitest)、render、still），Python 依赖写入 requirements.txt（edge-tts），README 写清楚如何从零跑出成片
 - [x] 2. 口播稿：`episodes/01-sanjia-fenjin/script.md`，750–900 字（约 3 分钟），口语化、有悬念，按上面 8 个要点组织；`sources.md` 列出全部引用的古文原句及出处
 - [x] 2b. 修订口播稿：按上面"叙事结构"和要点 1b，在开篇后新增礼论小节（含"天子之职莫大于礼，礼莫大于分，分莫大于名"原句），改写第 1 节结尾作为过渡，结尾第 8 节加一句回扣礼论（首尾呼应）；总字数调整为 850–1000 字（约 3.5 分钟），其余小节尽量不动；同步更新 sources.md（新增引文条目、上下文原文，删除"本集只取其意、未逐句引用"的说明）。如阶段 3 及之后已基于旧稿产出内容，需同步检查是否要调整
-- [ ] 3. 分镜 schema：`src/schema.ts` 用 zod 定义镜头类型（title / quote / map / dialogue / relation / timeline / narration），含旁白文本、镜头参数、转场；写单元测试
+- [x] 3. 分镜 schema：`src/schema.ts` 用 zod 定义镜头类型（title / quote / map / dialogue / relation / timeline / narration），含旁白文本、镜头参数、转场；写单元测试
 - [ ] 4. 分镜：`storyboard.json`，18–28 个镜头，覆盖全部要点，每个镜头 1 段旁白；通过 schema 校验
 - [ ] 5. 配音流水线：`scripts/tts.py` 逐镜头生成 mp3 和时间戳 json；`scripts/build-timeline.ts` 汇总时长生成 `timeline.json`（镜头起止帧、字幕分句）；一条命令 `npm run tts -- 01-sanjia-fenjin`
 - [ ] 6. 基础模板：TitleCard（片头：书名 + 集名 + 年份）、QuoteCard（竖排古文金句 + 印章效果）、Timeline（公元前 453 → 403 年事件轴）、Narration（纯旁白时的水墨背景缓动）
