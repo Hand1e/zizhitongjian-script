@@ -31,3 +31,21 @@
 - [x] 11. 渲染成片：`npm run render -- 01-sanjia-fenjin` 输出 `out/01-sanjia-fenjin.mp4`；用 ffprobe 检查分辨率、帧率、时长与配音总时长一致（误差 < 0.5 秒），并抽取每个镜头中间帧到 `out/frames/` 供人工查看
 - [x] 12. 自查打磨：逐镜头检查（文字是否越界、字幕和配音是否同步、人物是否穿模、颜色是否统一），列出问题并修复后重新渲染；写 `docs/REVIEW.md`
 - [x] 13. 可复用化：写 `docs/NEW_EPISODE.md`，说明做下一集的步骤（写稿 → 分镜 → 配音 → 渲染），并让 DeepSeek 能按同一流程生成新一集的 script/storyboard
+
+---
+
+# 第一集 · 第二版（按编剧剧本重做）
+
+**唯一依据：`episodes/01-sanjia-fenjin/screenplay.md`。** 旁白、画面、屏幕字都照剧本做，不要自行增删情节或改写旁白。如果发现剧本在制作上做不到，就在 `docs/SCREENPLAY_ISSUES.md` 记录问题和你的替代方案，用最接近的方案先做，不要停下来。
+第一版成片保留为 `out/01-sanjia-fenjin-v1.mp4` 作对照。
+
+- [ ] V1. 准备：把旧成片改名为 v1；从 screenplay.md 生成新的 `script.md`（只保留旁白）；更新 `sources.md`（加入剧本第五节的新增原文）；在 `src/theme.ts` 定义阵营色（智 #b0302a、赵 #2b2620、韩 #3d6b7a、魏 #9a6a3a、中立灰 #7a7a72、周天子 #c9a23a），全片统一引用
+- [ ] V2. 人物升级：按剧本"人物表"更新和新增人物；皮影加镂空花纹和关节；**加脸部五官和至少 4 种表情**（平静、得意、紧张/担忧、愤怒）；衣服颜色用阵营色。渲染一张"全体人物表"静帧 `out/stills/cast-sheet.png` 用于检查
+- [ ] V3. 常驻组件：CornerMap（角落势力图，支持领地变大、裂成三块再染色）、NameTag（首次出场名牌，2 秒淡出）
+- [ ] V4. 新场景模板：CrossSection（城墙剖面 + 水位 + 刻度）、Interior（厅堂，可换色调）、NightCity（夜色孤城 + 洪水）、Chariot（战车 + 三人 + 车厢局部特写）、SplitScreen（分屏）、Metaphor（嘴唇牙齿、竹子变箭）
+- [ ] V5. 道具：竹简（可写字、可从袖中抽出）、灶台和青蛙、城池令牌（地图上飞行）、印章戳（可换字换色）、大旗（倒下、被水卷走）、诏书和金印；地图扩展：天下地图、水流箭头掉头、领地瓜分
+- [ ] V6. 分镜：按剧本 S01–S49 重写 `storyboard.json`（扩展 schema 支持新模板和道具；一个剧本镜头对应一个分镜镜头，id 用 s01、s02……）；通过 schema 校验
+- [ ] V7. 配音和时间轴：重新生成配音；成片音频 loudnorm 到 -14 LUFS（TP -1.5），使用系统 PATH 里的完整版 ffmpeg
+- [ ] V8. 逐镜头静帧检查：每个镜头渲染中间帧到 `out/frames-v2/`，**逐张对照剧本的"画面"一栏**，确认旁白提到的东西画面上都有；把结果写成 `docs/SHOT_CHECK.md`（镜头号 / 剧本要求 / 实际画面 / 是否符合）。所有镜头都符合后再进入下一阶段
+- [ ] V9. 渲染成片：只做一次完整渲染，输出 `out/01-sanjia-fenjin-v2.mp4`；`-pix_fmt yuv420p`、tv range、`-movflags +faststart`；渲染并发数 4；ffprobe 检查时长与时间轴误差 < 0.5 秒
+- [ ] V10. 伏笔回收检查：对照剧本中所有【伏笔】和【回收】标注，并排截图放进 `docs/SHOT_CHECK.md`，确认回收镜头用的是同一个画面元素
