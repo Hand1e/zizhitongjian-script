@@ -1,0 +1,31 @@
+{
+  "name": "zztj-animation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "资治通鉴故事讲解动画（Remotion + TypeScript）",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "render": "remotion render",
+    "still": "remotion still"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.543",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
+    "typescript": "5.9.3",
+    "vitest": "5.1.0"
+  }
+}

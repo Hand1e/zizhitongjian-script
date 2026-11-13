@@ -1,0 +1,3 @@
+# Python 依赖：配音流水线（阶段 5）
+# 安装：python -m pip install -r requirements.txt
+edge-tts==7.3.1

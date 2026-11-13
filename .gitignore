@@ -1,4 +1,8 @@
 node_modules/
 out/
 episodes/*/audio/
+.remotion/
+.venv/
+__pycache__/
+*.tsbuildinfo
 .env
