@@ -13,7 +13,7 @@
 ## 阶段（按顺序完成，完成后把 [ ] 改为 [x]）
 
 - [x] 1. 脚手架：Remotion + TypeScript 项目，1920x1080/30fps，npm scripts（dev/studio、typecheck、test(vitest)、render、still），Python 依赖写入 requirements.txt（edge-tts），README 写清楚如何从零跑出成片
-- [ ] 2. 口播稿：`episodes/01-sanjia-fenjin/script.md`，750–900 字（约 3 分钟），口语化、有悬念，按上面 8 个要点组织；`sources.md` 列出全部引用的古文原句及出处
+- [x] 2. 口播稿：`episodes/01-sanjia-fenjin/script.md`，750–900 字（约 3 分钟），口语化、有悬念，按上面 8 个要点组织；`sources.md` 列出全部引用的古文原句及出处
 - [ ] 3. 分镜 schema：`src/schema.ts` 用 zod 定义镜头类型（title / quote / map / dialogue / relation / timeline / narration），含旁白文本、镜头参数、转场；写单元测试
 - [ ] 4. 分镜：`storyboard.json`，18–28 个镜头，覆盖全部要点，每个镜头 1 段旁白；通过 schema 校验
 - [ ] 5. 配音流水线：`scripts/tts.py` 逐镜头生成 mp3 和时间戳 json；`scripts/build-timeline.ts` 汇总时长生成 `timeline.json`（镜头起止帧、字幕分句）；一条命令 `npm run tts -- 01-sanjia-fenjin`
