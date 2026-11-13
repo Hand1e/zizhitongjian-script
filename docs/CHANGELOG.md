@@ -136,3 +136,64 @@
 - `npm run typecheck` 通过
 - `npm test` 通过：6 个测试文件、28 个用例
 - ffprobe（Remotion 自带）可读取全部 mp3 时长；时间轴帧号连续、无空洞
+
+## 2026-11-13 — 阶段 6：基础模板
+
+### 新增
+
+- `src/templates/TitleCard.tsx`：书名 / 集名 / 年份，宣纸底 + 朱红印章
+- `src/templates/QuoteCard.tsx`：竖排古文金句 + 印章；支持 horizontal / vertical
+- `src/templates/TimelineScene.tsx`：公元前 453 → 403 事件轴，节点逐个亮起
+- `src/templates/NarrationScene.tsx`：水墨晕染背景缓动 + 标题/关键词
+- `src/components/Seal.tsx`、`src/fonts.ts`、`src/templates/anim.ts` 等共用件
+- `TemplatePreview` 预览 Composition（4 × 5 秒）
+
+### 验证
+
+- `npm run typecheck` 通过
+- 静帧：`out/stills/template-title.png`、`template-quote.png`、`template-timeline.png`、`template-narration.png`，均 1920×1080、非纯色
+- 人工检查：标题与印章排版、竖排引文换行、时间轴节点位置
+
+## 2026-11-13 — 阶段 7：地图模板
+
+### 新增
+
+- `src/templates/MapScene.tsx`：晋国及智/韩/赵/魏四家简化示意图，含汾水、晋水、晋阳城、“示意图”标注
+- 支持：领地高亮/压暗、行军箭头（逐段绘制 + 箭头）、水淹晋阳涨水、领地易主颜色、轻推近
+- `MapPreview` 预览 Composition：`s15-refuse` 三路攻赵、`s17-flood` 水灌晋阳
+
+### 验证
+
+- `npm run typecheck` 通过
+- 静帧：`out/stills/map-attack.png`、`out/stills/map-flood.png`
+- 人工检查：四家色块区分、箭头指向、晋阳与河流位置、水淹范围
+
+## 2026-11-13 — 阶段 8：皮影人物与对话
+
+### 新增
+
+- `src/characters/Puppet.tsx`：侧身剪影，关节分段，支持站立 / 抬手 / 点头 / 行走
+- `src/characters/definitions.ts`：10 个角色的冠帽、胡须、袍色、配饰配置
+- `src/characters/index.tsx`：10 个具名组件 + `CHARACTER_COMPONENTS` 映射
+- `src/templates/DialogueScene.tsx`：2–3 人对白，说话人动作、纸色台词气泡、姓名标注
+- `CharacterPreview`（十角合影）、`DialoguePreview`（絺疵谏智伯 / 张孟谈说韩魏）
+
+### 验证
+
+- `npm run typecheck` 通过
+- `npm test`：新增人物测试，确认 10 个角色都有定义/组件，冠帽≥4 种、胡须≥3 种、袍色≥8 种
+- 静帧：`out/stills/characters.png`、`dialogue-chici.png`、`dialogue-zhang.png`
+- 人工检查：冠帽/胡须辨识度、抬手动作、气泡与说话人对应
+
+## 2026-11-13 — 阶段 9：关系图
+
+### 新增
+
+- `src/templates/RelationScene.tsx`：四家节点图，连线颜色区分盟/敌，支持 `changeAt` / `changeTo` 渐变
+- `RelationPreview`：`s22b-alliance` 的“韩魏倒戈”前后对比
+
+### 验证
+
+- `npm run typecheck` 通过
+- 静帧：`out/stills/relation-before.png`、`out/stills/relation-after.png`
+- 人工检查：智-韩/魏由蓝转红，韩/魏-赵保持蓝色
