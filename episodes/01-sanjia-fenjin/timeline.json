@@ -1,0 +1,573 @@
+{
+  "episodeId": "01-sanjia-fenjin",
+  "title": "三家分晋",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "totalDurationInFrames": 7582,
+  "totalDurationSeconds": 252.733,
+  "shots": [
+    {
+      "id": "s01-title",
+      "type": "title",
+      "narration": "公元前 403 年，周威烈王封晋国大夫魏斯、赵籍、韩虔为诸侯。司马光把这件事放在《资治通鉴》第一行。",
+      "startFrame": 0,
+      "durationInFrames": 310,
+      "endFrame": 310,
+      "audio": "audio/s01-title.mp3",
+      "subtitles": [
+        {
+          "text": "公元前 403 年，周威烈王封晋国大夫魏斯、赵籍、韩虔为诸侯。",
+          "startFrame": 3,
+          "endFrame": 192
+        },
+        {
+          "text": "司马光把这件事放在《资治通鉴》第一行。",
+          "startFrame": 190,
+          "endFrame": 302
+        }
+      ]
+    },
+    {
+      "id": "s02-hook",
+      "type": "narration",
+      "narration": "一纸册封，为什么被看作天下大乱的开始？",
+      "startFrame": 310,
+      "durationInFrames": 129,
+      "endFrame": 439,
+      "audio": "audio/s02-hook.mp3",
+      "subtitles": [
+        {
+          "text": "一纸册封，为什么被看作天下大乱的开始？",
+          "startFrame": 3,
+          "endFrame": 123
+        }
+      ]
+    },
+    {
+      "id": "s03-li",
+      "type": "quote",
+      "narration": "司马光在开篇的“臣光曰”里给出答案：“天子之职莫大于礼，礼莫大于分，分莫大于名。”天子最要紧的是守住礼制，礼的核心是君臣名分。",
+      "startFrame": 439,
+      "durationInFrames": 387,
+      "endFrame": 826,
+      "audio": "audio/s03-li.mp3",
+      "subtitles": [
+        {
+          "text": "司马光在开篇的“臣光曰”里给出答案：“天子之职莫大于礼，礼莫大于分，分莫大于名。",
+          "startFrame": 3,
+          "endFrame": 222
+        },
+        {
+          "text": "天子最要紧的是守住礼制，礼的核心是君臣名分。",
+          "startFrame": 220,
+          "endFrame": 379
+        }
+      ]
+    },
+    {
+      "id": "s04-mingfen",
+      "type": "map",
+      "narration": "韩、赵、魏本是晋国的臣子，瓜分了君主的土地，周天子不但不讨伐，反而封他们做诸侯，等于亲手毁掉名分。",
+      "startFrame": 826,
+      "durationInFrames": 304,
+      "endFrame": 1130,
+      "audio": "audio/s04-mingfen.mp3",
+      "subtitles": [
+        {
+          "text": "韩、赵、魏本是晋国的臣子，瓜分了君主的土地，周天子不但不讨伐，反而封他们做诸侯，等于亲手毁掉名分。",
+          "startFrame": 3,
+          "endFrame": 298
+        }
+      ]
+    },
+    {
+      "id": "s05-transition",
+      "type": "narration",
+      "narration": "名分一坏，天下只认拳头，战国开场。那么，这三家是怎么做大的？故事得从晋国的智伯说起。",
+      "startFrame": 1130,
+      "durationInFrames": 298,
+      "endFrame": 1428,
+      "audio": "audio/s05-transition.mp3",
+      "subtitles": [
+        {
+          "text": "名分一坏，天下只认拳头，战国开场。",
+          "startFrame": 3,
+          "endFrame": 120
+        },
+        {
+          "text": "那么，这三家是怎么做大的？",
+          "startFrame": 119,
+          "endFrame": 206
+        },
+        {
+          "text": "故事得从晋国的智伯说起。",
+          "startFrame": 206,
+          "endFrame": 290
+        }
+      ]
+    },
+    {
+      "id": "s06-zhi",
+      "type": "narration",
+      "narration": "晋国末年，智氏最强。智宣子要立儿子智瑶，也就是后来的智伯。",
+      "startFrame": 1428,
+      "durationInFrames": 207,
+      "endFrame": 1635,
+      "audio": "audio/s06-zhi.mp3",
+      "subtitles": [
+        {
+          "text": "晋国末年，智氏最强。",
+          "startFrame": 3,
+          "endFrame": 79
+        },
+        {
+          "text": "智宣子要立儿子智瑶，也就是后来的智伯。",
+          "startFrame": 78,
+          "endFrame": 199
+        }
+      ]
+    },
+    {
+      "id": "s07-zhi-guo",
+      "type": "quote",
+      "narration": "族人智果急了：“瑶之贤于人者五，其不逮者一也。”",
+      "startFrame": 1635,
+      "durationInFrames": 154,
+      "endFrame": 1789,
+      "audio": "audio/s07-zhi-guo.mp3",
+      "subtitles": [
+        {
+          "text": "族人智果急了：“瑶之贤于人者五，其不逮者一也。",
+          "startFrame": 3,
+          "endFrame": 148
+        }
+      ]
+    },
+    {
+      "id": "s08-wuxian",
+      "type": "narration",
+      "narration": "智瑶相貌堂堂、武艺高强、多才多艺、能言善辩、刚毅果敢，样样过人，却有一个短处：不仁。",
+      "startFrame": 1789,
+      "durationInFrames": 270,
+      "endFrame": 2059,
+      "audio": "audio/s08-wuxian.mp3",
+      "subtitles": [
+        {
+          "text": "智瑶相貌堂堂、武艺高强、多才多艺、能言善辩、刚毅果敢，样样过人，却有一个短处：不仁。",
+          "startFrame": 3,
+          "endFrame": 264
+        }
+      ]
+    },
+    {
+      "id": "s09-zhi-guo-warn",
+      "type": "dialogue",
+      "narration": "智果说，用长处压人、以不仁行事，智氏必灭。智宣子不听；智果另立辅氏，和家族划清界限。",
+      "startFrame": 2059,
+      "durationInFrames": 298,
+      "endFrame": 2357,
+      "audio": "audio/s09-zhi-guo-warn.mp3",
+      "subtitles": [
+        {
+          "text": "智果说，用长处压人、以不仁行事，智氏必灭。",
+          "startFrame": 3,
+          "endFrame": 145
+        },
+        {
+          "text": "智宣子不听；智果另立辅氏，和家族划清界限。",
+          "startFrame": 143,
+          "endFrame": 291
+        }
+      ]
+    },
+    {
+      "id": "s10-zhao",
+      "type": "narration",
+      "narration": "另一边，赵简子也在选继承人。他把训诫写在两片竹简上，交给伯鲁和无恤。",
+      "startFrame": 2357,
+      "durationInFrames": 230,
+      "endFrame": 2587,
+      "audio": "audio/s10-zhao.mp3",
+      "subtitles": [
+        {
+          "text": "另一边，赵简子也在选继承人。",
+          "startFrame": 3,
+          "endFrame": 92
+        },
+        {
+          "text": "他把训诫写在两片竹简上，交给伯鲁和无恤。",
+          "startFrame": 91,
+          "endFrame": 222
+        }
+      ]
+    },
+    {
+      "id": "s11-bamboo",
+      "type": "dialogue",
+      "narration": "三年后考试：伯鲁背不出，竹简也丢了；无恤背得滚瓜烂熟，竹简从袖子里掏出来，还带着。",
+      "startFrame": 2587,
+      "durationInFrames": 257,
+      "endFrame": 2844,
+      "audio": "audio/s11-bamboo.mp3",
+      "subtitles": [
+        {
+          "text": "三年后考试：伯鲁背不出，竹简也丢了；无恤背得滚瓜烂熟，竹简从袖子里掏出来，还带着。",
+          "startFrame": 3,
+          "endFrame": 251
+        }
+      ]
+    },
+    {
+      "id": "s12-zhao-xiangzi",
+      "type": "narration",
+      "narration": "于是立无恤，就是赵襄子。一个把教诲带在身上，一个丢在脑后，赵家的命运已见高下。",
+      "startFrame": 2844,
+      "durationInFrames": 243,
+      "endFrame": 3087,
+      "audio": "audio/s12-zhao-xiangzi.mp3",
+      "subtitles": [
+        {
+          "text": "于是立无恤，就是赵襄子。",
+          "startFrame": 3,
+          "endFrame": 81
+        },
+        {
+          "text": "一个把教诲带在身上，一个丢在脑后，赵家的命运已见高下。",
+          "startFrame": 79,
+          "endFrame": 235
+        }
+      ]
+    },
+    {
+      "id": "s13-ask-han",
+      "type": "map",
+      "narration": "智宣子死后，智伯执政。他仗着势大，向韩康子要地。",
+      "startFrame": 3087,
+      "durationInFrames": 186,
+      "endFrame": 3273,
+      "audio": "audio/s13-ask-han.mp3",
+      "subtitles": [
+        {
+          "text": "智宣子死后，智伯执政。",
+          "startFrame": 3,
+          "endFrame": 84
+        },
+        {
+          "text": "他仗着势大，向韩康子要地。",
+          "startFrame": 83,
+          "endFrame": 178
+        }
+      ]
+    },
+    {
+      "id": "s14-han-gives",
+      "type": "map",
+      "narration": "韩康子不想给，谋士段规劝他：给。智伯尝到甜头，还会向别人要；别人不给，他就动兵，我们正好等变化。韩康子给了一座万户之邑。",
+      "startFrame": 3273,
+      "durationInFrames": 383,
+      "endFrame": 3656,
+      "audio": "audio/s14-han-gives.mp3",
+      "subtitles": [
+        {
+          "text": "韩康子不想给，谋士段规劝他：给。",
+          "startFrame": 3,
+          "endFrame": 107
+        },
+        {
+          "text": "智伯尝到甜头，还会向别人要；别人不给，他就动兵，我们正好等变化。",
+          "startFrame": 105,
+          "endFrame": 289
+        },
+        {
+          "text": "韩康子给了一座万户之邑。",
+          "startFrame": 289,
+          "endFrame": 376
+        }
+      ]
+    },
+    {
+      "id": "s15-refuse",
+      "type": "map",
+      "narration": "智伯又向魏桓子要地，魏桓子也给了。轮到赵襄子，他说：不给。智伯大怒，带着韩、魏的军队来打赵氏。",
+      "startFrame": 3656,
+      "durationInFrames": 331,
+      "endFrame": 3987,
+      "audio": "audio/s15-refuse.mp3",
+      "subtitles": [
+        {
+          "text": "智伯又向魏桓子要地，魏桓子也给了。",
+          "startFrame": 3,
+          "endFrame": 115
+        },
+        {
+          "text": "轮到赵襄子，他说：不给。",
+          "startFrame": 114,
+          "endFrame": 194
+        },
+        {
+          "text": "智伯大怒，带着韩、魏的军队来打赵氏。",
+          "startFrame": 194,
+          "endFrame": 324
+        }
+      ]
+    },
+    {
+      "id": "s16-jinyang",
+      "type": "map",
+      "narration": "赵襄子往哪儿跑？长子城近，城墙厚，可百姓被榨干力气，不会跟他死守；邯郸仓库满，却是搜刮来的，也不行。他选了晋阳，父亲嘱咐过、尹铎宽厚治理过的地方。",
+      "startFrame": 3987,
+      "durationInFrames": 468,
+      "endFrame": 4455,
+      "audio": "audio/s16-jinyang.mp3",
+      "subtitles": [
+        {
+          "text": "赵襄子往哪儿跑？",
+          "startFrame": 3,
+          "endFrame": 56
+        },
+        {
+          "text": "长子城近，城墙厚，可百姓被榨干力气，不会跟他死守；邯郸仓库满，却是搜刮来的，也不行。",
+          "startFrame": 54,
+          "endFrame": 317
+        },
+        {
+          "text": "他选了晋阳，父亲嘱咐过、尹铎宽厚治理过的地方。",
+          "startFrame": 317,
+          "endFrame": 459
+        }
+      ]
+    },
+    {
+      "id": "s17-flood",
+      "type": "map",
+      "narration": "智伯围住晋阳，引水灌城。",
+      "startFrame": 4455,
+      "durationInFrames": 105,
+      "endFrame": 4560,
+      "audio": "audio/s17-flood.mp3",
+      "subtitles": [
+        {
+          "text": "智伯围住晋阳，引水灌城。",
+          "startFrame": 3,
+          "endFrame": 98
+        }
+      ]
+    },
+    {
+      "id": "s18-three-ban",
+      "type": "quote",
+      "narration": "“城不浸者三版”，城墙只剩三版没被淹；“沉灶产蛙，民无叛意”，灶台泡在水里都能养青蛙，城里却没人想投降。",
+      "startFrame": 4560,
+      "durationInFrames": 313,
+      "endFrame": 4873,
+      "audio": "audio/s18-three-ban.mp3",
+      "subtitles": [
+        {
+          "text": "城不浸者三版”，城墙只剩三版没被淹；“沉灶产蛙，民无叛意”，灶台泡在水里都能养青蛙，城里却没人想投降。",
+          "startFrame": 3,
+          "endFrame": 307
+        }
+      ]
+    },
+    {
+      "id": "s19-chici",
+      "type": "dialogue",
+      "narration": "眼看要破城，谋士絺疵提醒智伯：韩、魏必反。说好灭赵后三分赵地，城快降了，韩康子和魏桓子却满脸忧色。",
+      "startFrame": 4873,
+      "durationInFrames": 336,
+      "endFrame": 5209,
+      "audio": "audio/s19-chici.mp3",
+      "subtitles": [
+        {
+          "text": "眼看要破城，谋士絺疵提醒智伯：韩、魏必反。",
+          "startFrame": 3,
+          "endFrame": 143
+        },
+        {
+          "text": "说好灭赵后三分赵地，城快降了，韩康子和魏桓子却满脸忧色。",
+          "startFrame": 141,
+          "endFrame": 328
+        }
+      ]
+    },
+    {
+      "id": "s20-denial",
+      "type": "narration",
+      "narration": "智伯不信，还把这话告诉二人。二人矢口否认。絺疵知道劝不动，请求出使齐国，走了。",
+      "startFrame": 5209,
+      "durationInFrames": 271,
+      "endFrame": 5480,
+      "audio": "audio/s20-denial.mp3",
+      "subtitles": [
+        {
+          "text": "智伯不信，还把这话告诉二人。",
+          "startFrame": 3,
+          "endFrame": 89
+        },
+        {
+          "text": "二人矢口否认。",
+          "startFrame": 88,
+          "endFrame": 141
+        },
+        {
+          "text": "絺疵知道劝不动，请求出使齐国，走了。",
+          "startFrame": 141,
+          "endFrame": 264
+        }
+      ]
+    },
+    {
+      "id": "s21-zhang",
+      "type": "dialogue",
+      "narration": "赵襄子派张孟谈悄悄出城，去见韩、魏。张孟谈只说中要害：“唇亡则齿寒。”赵亡，下一个就是韩、魏。双方约定日期。",
+      "startFrame": 5480,
+      "durationInFrames": 375,
+      "endFrame": 5855,
+      "audio": "audio/s21-zhang.mp3",
+      "subtitles": [
+        {
+          "text": "赵襄子派张孟谈悄悄出城，去见韩、魏。",
+          "startFrame": 3,
+          "endFrame": 129
+        },
+        {
+          "text": "张孟谈只说中要害：“唇亡则齿寒。",
+          "startFrame": 128,
+          "endFrame": 230
+        },
+        {
+          "text": "赵亡，下一个就是韩、魏。",
+          "startFrame": 230,
+          "endFrame": 312
+        },
+        {
+          "text": "双方约定日期。",
+          "startFrame": 312,
+          "endFrame": 367
+        }
+      ]
+    },
+    {
+      "id": "s22-counter",
+      "type": "map",
+      "narration": "当夜，赵襄子派人杀掉守堤官吏，决开堤坝，大水反灌智伯军营。",
+      "startFrame": 5855,
+      "durationInFrames": 199,
+      "endFrame": 6054,
+      "audio": "audio/s22-counter.mp3",
+      "subtitles": [
+        {
+          "text": "当夜，赵襄子派人杀掉守堤官吏，决开堤坝，大水反灌智伯军营。",
+          "startFrame": 3,
+          "endFrame": 193
+        }
+      ]
+    },
+    {
+      "id": "s22b-alliance",
+      "type": "relation",
+      "narration": "智伯军忙着救水，阵脚大乱；韩、魏两翼夹击，赵襄子正面冲杀。",
+      "startFrame": 6054,
+      "durationInFrames": 205,
+      "endFrame": 6259,
+      "audio": "audio/s22b-alliance.mp3",
+      "subtitles": [
+        {
+          "text": "智伯军忙着救水，阵脚大乱；韩、魏两翼夹击，赵襄子正面冲杀。",
+          "startFrame": 3,
+          "endFrame": 199
+        }
+      ]
+    },
+    {
+      "id": "s23-timeline",
+      "type": "timeline",
+      "narration": "智伯被杀，智氏全族被灭。那是公元前 453 年。五十年后，三家封侯，战国开场。",
+      "startFrame": 6259,
+      "durationInFrames": 278,
+      "endFrame": 6537,
+      "audio": "audio/s23-timeline.mp3",
+      "subtitles": [
+        {
+          "text": "智伯被杀，智氏全族被灭。",
+          "startFrame": 3,
+          "endFrame": 90
+        },
+        {
+          "text": "那是公元前 453 年。",
+          "startFrame": 88,
+          "endFrame": 161
+        },
+        {
+          "text": "五十年后，三家封侯，战国开场。",
+          "startFrame": 161,
+          "endFrame": 270
+        }
+      ]
+    },
+    {
+      "id": "s24-caide",
+      "type": "quote",
+      "narration": "司马光总结说：“智伯之亡也，才胜德也。”又说：“才者，德之资也；德者，才之帅也。”才能是德的凭借，德是才能的统帅。",
+      "startFrame": 6537,
+      "durationInFrames": 374,
+      "endFrame": 6911,
+      "audio": "audio/s24-caide.mp3",
+      "subtitles": [
+        {
+          "text": "司马光总结说：“智伯之亡也，才胜德也。",
+          "startFrame": 3,
+          "endFrame": 126
+        },
+        {
+          "text": "又说：“才者，德之资也；德者，才之帅也。",
+          "startFrame": 125,
+          "endFrame": 258
+        },
+        {
+          "text": "才能是德的凭借，德是才能的统帅。",
+          "startFrame": 258,
+          "endFrame": 366
+        }
+      ]
+    },
+    {
+      "id": "s25-tiger",
+      "type": "narration",
+      "narration": "找不到圣人和君子，“与其得小人，不若得愚人”：愚人想干坏事，能力不够；小人既有脑子又有胆子，就是长了翅膀的老虎。",
+      "startFrame": 6911,
+      "durationInFrames": 327,
+      "endFrame": 7238,
+      "audio": "audio/s25-tiger.mp3",
+      "subtitles": [
+        {
+          "text": "找不到圣人和君子，“与其得小人，不若得愚人”：愚人想干坏事，能力不够；小人既有脑子又有胆子，就是长了翅膀的老虎。",
+          "startFrame": 3,
+          "endFrame": 321
+        }
+      ]
+    },
+    {
+      "id": "s26-modern",
+      "type": "narration",
+      "narration": "开篇讲名分，结尾讲才德，说到底是一回事。用人、教育孩子，顺序都一样：先问该不该，再问能不能；先立德，再长才。",
+      "startFrame": 7238,
+      "durationInFrames": 344,
+      "endFrame": 7582,
+      "audio": "audio/s26-modern.mp3",
+      "subtitles": [
+        {
+          "text": "开篇讲名分，结尾讲才德，说到底是一回事。",
+          "startFrame": 3,
+          "endFrame": 124
+        },
+        {
+          "text": "用人、教育孩子，顺序都一样：先问该不该，再问能不能；先立德，再长才。",
+          "startFrame": 122,
+          "endFrame": 336
+        }
+      ]
+    }
+  ]
+}

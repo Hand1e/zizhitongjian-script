@@ -115,3 +115,24 @@
 - `npm run typecheck` 通过
 - `npm test` 通过：5 个测试文件、24 个用例
 - `storyboard.json` 通过 `storyboardSchema` 严格校验
+
+## 2026-11-13 — 阶段 5：配音与时间轴
+
+### 新增
+
+- `scripts/tts.py`：读取 `storyboard.json`，逐镜头调用 edge-tts（`zh-CN-YunjianNeural`，`+8%`，SentenceBoundary），生成 `episodes/<id>/audio/<shot>.mp3` 与同名 json 时间戳；3 并发、失败重试、已有音频自动跳过、完成后自动调用时间轴脚本
+- `scripts/build-timeline.ts`：用 ffprobe 读取每个 mp3 的实际时长，生成 `timeline.json`；包含镜头起止帧、句级字幕、全片总时长；每个镜头尾部留 6 帧静音
+- `npm run tts -- 01-sanjia-fenjin` 一条命令完成「配音 + 时间轴」
+- `src/timeline.test.ts`：校验镜头顺序、帧号连续、总时长与帧率一致、字幕都在镜头范围内
+
+### 生成结果
+
+- 27 个镜头全部生成，配音总长 247.3 秒，成片时间轴 252.733 秒（7582 帧，4 分 12 秒）
+- 音频在 `episodes/01-sanjia-fenjin/audio/`，按约定不提交；`timeline.json` 提交，供 Composition 直接读取
+- 实际语速比预估慢，成片比 3.5 分钟长约 40 秒；阶段 12 复查时再决定是否调整 rate
+
+### 验证
+
+- `npm run typecheck` 通过
+- `npm test` 通过：6 个测试文件、28 个用例
+- ffprobe（Remotion 自带）可读取全部 mp3 时长；时间轴帧号连续、无空洞

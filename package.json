@@ -13,7 +13,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "render": "remotion render",
-    "still": "remotion still"
+    "still": "remotion still",
+    "tts": "python scripts/tts.py",
+    "timeline": "tsx scripts/build-timeline.ts"
   },
   "dependencies": {
     "@remotion/cli": "4.0.543",
@@ -26,6 +28,7 @@
     "@types/node": "24.19.2",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
+    "tsx": "^4.23.15",
     "typescript": "5.9.3",
     "vitest": "5.1.0"
   }
