@@ -91,3 +91,27 @@
 - `npm run typecheck` 通过
 - `npm test` 通过：4 个测试文件、19 个用例（内容测试已按 2b 新稿更新）
 - schema 不参与渲染；既有静帧 `out/stills/scaffold-preview.png` 已复跑成功
+
+## 2026-11-13 — 阶段 4：分镜
+
+### 新增
+
+- `episodes/01-sanjia-fenjin/storyboard.json`：27 个镜头，覆盖 9 节口播稿的全部内容；每个镜头一段旁白，拼接后与 `script.md` 完全一致
+- `src/storyboard.test.ts`：校验镜头数 18–28、7 种镜头类型齐全、旁白无遗漏/重复、预估总时长 3–4 分钟、首镜头无转场且存在卷轴转场
+
+### 分镜结构
+
+- 片头 → 悬念 → 礼论 quote → 三家分晋 map → 倒叙过渡
+- 智氏：narration + 智果 quote + 智宣子/智果 dialogue
+- 赵氏：narration + 赵简子/赵襄子 dialogue
+- 索地：4 个 map 镜头（韩献地、赵拒绝、退守晋阳、水灌晋阳）
+- 晋阳：三版 quote、絺疵/智伯 dialogue、智伯不信 narration
+- 反攻：张孟谈/韩/魏 dialogue、决水 map、韩魏倒戈 relation
+- 收束：公元前 453→403 timeline、才德 quote、两段现代启示 narration
+- 预告时长合计 206.8 秒（约 3 分 27 秒），真实时长待阶段 5 配音决定
+
+### 验证
+
+- `npm run typecheck` 通过
+- `npm test` 通过：5 个测试文件、24 个用例
+- `storyboard.json` 通过 `storyboardSchema` 严格校验

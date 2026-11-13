@@ -1,0 +1,578 @@
+{
+  "episodeId": "01-sanjia-fenjin",
+  "title": "三家分晋",
+  "shots": [
+    {
+      "id": "s01-title",
+      "type": "title",
+      "narration": "公元前 403 年，周威烈王封晋国大夫魏斯、赵籍、韩虔为诸侯。司马光把这件事放在《资治通鉴》第一行。",
+      "estimatedDurationInFrames": 248,
+      "title": "三家分晋",
+      "subtitle": "资治通鉴 · 第一集",
+      "yearLabel": "公元前 403 年",
+      "transition": {
+        "type": "none",
+        "durationInFrames": 0
+      }
+    },
+    {
+      "id": "s02-hook",
+      "type": "narration",
+      "narration": "一纸册封，为什么被看作天下大乱的开始？",
+      "estimatedDurationInFrames": 111,
+      "heading": "一纸册封",
+      "keywords": [
+        "公元前 403 年",
+        "三家分晋"
+      ],
+      "background": "ink",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s03-li",
+      "type": "quote",
+      "narration": "司马光在开篇的“臣光曰”里给出答案：“天子之职莫大于礼，礼莫大于分，分莫大于名。”天子最要紧的是守住礼制，礼的核心是君臣名分。",
+      "estimatedDurationInFrames": 346,
+      "text": "天子之职莫大于礼，礼莫大于分，分莫大于名。",
+      "source": "《资治通鉴》卷第一·周纪一",
+      "attribution": "司马光",
+      "layout": "vertical",
+      "transition": {
+        "type": "scroll",
+        "durationInFrames": 18
+      }
+    },
+    {
+      "id": "s04-mingfen",
+      "type": "map",
+      "narration": "韩、赵、魏本是晋国的臣子，瓜分了君主的土地，周天子不但不讨伐，反而封他们做诸侯，等于亲手毁掉名分。",
+      "estimatedDurationInFrames": 274,
+      "title": "三家分晋",
+      "focus": [
+        "han",
+        "zhao",
+        "wei"
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s05-transition",
+      "type": "narration",
+      "narration": "名分一坏，天下只认拳头，战国开场。那么，这三家是怎么做大的？故事得从晋国的智伯说起。",
+      "estimatedDurationInFrames": 235,
+      "heading": "故事从智伯说起",
+      "keywords": [
+        "战国",
+        "智伯"
+      ],
+      "background": "ink",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s06-zhi",
+      "type": "narration",
+      "narration": "晋国末年，智氏最强。智宣子要立儿子智瑶，也就是后来的智伯。",
+      "estimatedDurationInFrames": 163,
+      "heading": "智氏最强",
+      "keywords": [
+        "智宣子",
+        "智瑶"
+      ],
+      "background": "paper",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s07-zhi-guo",
+      "type": "quote",
+      "narration": "族人智果急了：“瑶之贤于人者五，其不逮者一也。”",
+      "estimatedDurationInFrames": 124,
+      "text": "瑶之贤于人者五，其不逮者一也。",
+      "source": "《资治通鉴》卷第一·周纪一",
+      "attribution": "智果",
+      "layout": "vertical",
+      "transition": {
+        "type": "scroll",
+        "durationInFrames": 18
+      }
+    },
+    {
+      "id": "s08-wuxian",
+      "type": "narration",
+      "narration": "智瑶相貌堂堂、武艺高强、多才多艺、能言善辩、刚毅果敢，样样过人，却有一个短处：不仁。",
+      "estimatedDurationInFrames": 222,
+      "heading": "五贤一不仁",
+      "keywords": [
+        "才",
+        "不仁"
+      ],
+      "background": "ink",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s09-zhi-guo-warn",
+      "type": "dialogue",
+      "narration": "智果说，用长处压人、以不仁行事，智氏必灭。智宣子不听；智果另立辅氏，和家族划清界限。",
+      "estimatedDurationInFrames": 228,
+      "speakers": [
+        "zhi-guo",
+        "zhi-xuanzi"
+      ],
+      "lines": [
+        {
+          "speaker": "zhi-guo",
+          "text": "智宗必灭。",
+          "gesture": "raise"
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s10-zhao",
+      "type": "narration",
+      "narration": "另一边，赵简子也在选继承人。他把训诫写在两片竹简上，交给伯鲁和无恤。",
+      "estimatedDurationInFrames": 196,
+      "heading": "赵简子试子",
+      "keywords": [
+        "竹简",
+        "无恤"
+      ],
+      "background": "paper",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s11-bamboo",
+      "type": "dialogue",
+      "narration": "三年后考试：伯鲁背不出，竹简也丢了；无恤背得滚瓜烂熟，竹简从袖子里掏出来，还带着。",
+      "estimatedDurationInFrames": 228,
+      "speakers": [
+        "zhao-jianzi",
+        "zhao-xiangzi"
+      ],
+      "lines": [
+        {
+          "speaker": "zhao-jianzi",
+          "text": "谨识之。",
+          "gesture": "raise"
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s12-zhao-xiangzi",
+      "type": "narration",
+      "narration": "于是立无恤，就是赵襄子。一个把教诲带在身上，一个丢在脑后，赵家的命运已见高下。",
+      "estimatedDurationInFrames": 222,
+      "heading": "赵襄子",
+      "keywords": [
+        "无恤",
+        "赵襄子"
+      ],
+      "background": "ink",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s13-ask-han",
+      "type": "map",
+      "narration": "智宣子死后，智伯执政。他仗着势大，向韩康子要地。",
+      "estimatedDurationInFrames": 130,
+      "title": "智伯索地",
+      "focus": [
+        "zhi",
+        "han"
+      ],
+      "arrows": [
+        {
+          "from": "zhi",
+          "to": "han",
+          "label": "索地",
+          "kind": "march",
+          "progress": 1
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s14-han-gives",
+      "type": "map",
+      "narration": "韩康子不想给，谋士段规劝他：给。智伯尝到甜头，还会向别人要；别人不给，他就动兵，我们正好等变化。韩康子给了一座万户之邑。",
+      "estimatedDurationInFrames": 333,
+      "title": "韩氏献地",
+      "focus": [
+        "han"
+      ],
+      "arrows": [
+        {
+          "from": "zhi",
+          "to": "han",
+          "label": "万家之邑",
+          "kind": "march",
+          "progress": 1
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s15-refuse",
+      "type": "map",
+      "narration": "智伯又向魏桓子要地，魏桓子也给了。轮到赵襄子，他说：不给。智伯大怒，带着韩、魏的军队来打赵氏。",
+      "estimatedDurationInFrames": 254,
+      "title": "赵氏拒绝",
+      "focus": [
+        "zhao"
+      ],
+      "arrows": [
+        {
+          "from": "zhi",
+          "to": "zhao",
+          "label": "攻赵",
+          "kind": "attack",
+          "progress": 1
+        },
+        {
+          "from": "han",
+          "to": "zhao",
+          "label": "",
+          "kind": "march",
+          "progress": 1
+        },
+        {
+          "from": "wei",
+          "to": "zhao",
+          "label": "",
+          "kind": "march",
+          "progress": 1
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s16-jinyang",
+      "type": "map",
+      "narration": "赵襄子往哪儿跑？长子城近，城墙厚，可百姓被榨干力气，不会跟他死守；邯郸仓库满，却是搜刮来的，也不行。他选了晋阳，父亲嘱咐过、尹铎宽厚治理过的地方。",
+      "estimatedDurationInFrames": 404,
+      "title": "退守晋阳",
+      "focus": [
+        "zhao"
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s17-flood",
+      "type": "map",
+      "narration": "智伯围住晋阳，引水灌城。",
+      "estimatedDurationInFrames": 65,
+      "title": "水灌晋阳",
+      "focus": [
+        "zhao"
+      ],
+      "flood": {
+        "active": true,
+        "level": 0.7
+      },
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s18-three-ban",
+      "type": "quote",
+      "narration": "“城不浸者三版”，城墙只剩三版没被淹；“沉灶产蛙，民无叛意”，灶台泡在水里都能养青蛙，城里却没人想投降。",
+      "estimatedDurationInFrames": 274,
+      "text": "城不浸者三版；沉灶产蛙，民无叛意。",
+      "source": "《资治通鉴》卷第一·周纪一",
+      "attribution": "司马光",
+      "layout": "vertical",
+      "transition": {
+        "type": "scroll",
+        "durationInFrames": 18
+      }
+    },
+    {
+      "id": "s19-chici",
+      "type": "dialogue",
+      "narration": "眼看要破城，谋士絺疵提醒智伯：韩、魏必反。说好灭赵后三分赵地，城快降了，韩康子和魏桓子却满脸忧色。",
+      "estimatedDurationInFrames": 274,
+      "speakers": [
+        "chi-ci",
+        "zhi-yao"
+      ],
+      "lines": [
+        {
+          "speaker": "chi-ci",
+          "text": "韩、魏必反矣。",
+          "gesture": "raise"
+        },
+        {
+          "speaker": "zhi-yao",
+          "text": "子何以知之？",
+          "gesture": "stand"
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s20-denial",
+      "type": "narration",
+      "narration": "智伯不信，还把这话告诉二人。二人矢口否认。絺疵知道劝不动，请求出使齐国，走了。",
+      "estimatedDurationInFrames": 215,
+      "heading": "智伯不信",
+      "keywords": [
+        "絺疵",
+        "出使齐国"
+      ],
+      "background": "ink",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s21-zhang",
+      "type": "dialogue",
+      "narration": "赵襄子派张孟谈悄悄出城，去见韩、魏。张孟谈只说中要害：“唇亡则齿寒。”赵亡，下一个就是韩、魏。双方约定日期。",
+      "estimatedDurationInFrames": 280,
+      "speakers": [
+        "zhang-mengtan",
+        "han-kangzi",
+        "wei-huanzi"
+      ],
+      "lines": [
+        {
+          "speaker": "zhang-mengtan",
+          "text": "唇亡则齿寒。",
+          "gesture": "raise"
+        },
+        {
+          "speaker": "han-kangzi",
+          "text": "我心知其然也。",
+          "gesture": "nod"
+        },
+        {
+          "speaker": "wei-huanzi",
+          "text": "恐事未遂而谋泄。",
+          "gesture": "nod"
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s22-counter",
+      "type": "map",
+      "narration": "当夜，赵襄子派人杀掉守堤官吏，决开堤坝，大水反灌智伯军营。",
+      "estimatedDurationInFrames": 163,
+      "title": "决水反灌",
+      "focus": [
+        "zhi"
+      ],
+      "flood": {
+        "active": true,
+        "level": 0.9
+      },
+      "arrows": [
+        {
+          "from": "han",
+          "to": "zhi",
+          "label": "夹击",
+          "kind": "attack",
+          "progress": 1
+        },
+        {
+          "from": "wei",
+          "to": "zhi",
+          "label": "夹击",
+          "kind": "attack",
+          "progress": 1
+        },
+        {
+          "from": "zhao",
+          "to": "zhi",
+          "label": "冲杀",
+          "kind": "attack",
+          "progress": 1
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s22b-alliance",
+      "type": "relation",
+      "narration": "智伯军忙着救水，阵脚大乱；韩、魏两翼夹击，赵襄子正面冲杀。",
+      "estimatedDurationInFrames": 157,
+      "nodes": [
+        {
+          "id": "zhi",
+          "label": "智氏",
+          "emphasis": true
+        },
+        {
+          "id": "han",
+          "label": "韩氏"
+        },
+        {
+          "id": "zhao",
+          "label": "赵氏"
+        },
+        {
+          "id": "wei",
+          "label": "魏氏"
+        }
+      ],
+      "edges": [
+        {
+          "from": "zhi",
+          "to": "han",
+          "relation": "ally",
+          "changeAt": 0.3,
+          "changeTo": "enemy"
+        },
+        {
+          "from": "zhi",
+          "to": "wei",
+          "relation": "ally",
+          "changeAt": 0.3,
+          "changeTo": "enemy"
+        },
+        {
+          "from": "han",
+          "to": "zhao",
+          "relation": "ally"
+        },
+        {
+          "from": "wei",
+          "to": "zhao",
+          "relation": "ally"
+        },
+        {
+          "from": "zhi",
+          "to": "zhao",
+          "relation": "enemy"
+        }
+      ],
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s23-timeline",
+      "type": "timeline",
+      "narration": "智伯被杀，智氏全族被灭。那是公元前 453 年。五十年后，三家封侯，战国开场。",
+      "estimatedDurationInFrames": 183,
+      "events": [
+        {
+          "year": -453,
+          "label": "三家灭智",
+          "detail": "晋阳之战",
+          "emphasis": true
+        },
+        {
+          "year": -403,
+          "label": "三家封侯",
+          "detail": "周威烈王命为诸侯",
+          "emphasis": true
+        }
+      ],
+      "activeIndex": 1,
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s24-caide",
+      "type": "quote",
+      "narration": "司马光总结说：“智伯之亡也，才胜德也。”又说：“才者，德之资也；德者，才之帅也。”才能是德的凭借，德是才能的统帅。",
+      "estimatedDurationInFrames": 280,
+      "text": "智伯之亡也，才胜德也。才者，德之资也；德者，才之帅也。",
+      "source": "《资治通鉴》卷第一·周纪一",
+      "attribution": "司马光",
+      "layout": "vertical",
+      "transition": {
+        "type": "scroll",
+        "durationInFrames": 18
+      }
+    },
+    {
+      "id": "s25-tiger",
+      "type": "narration",
+      "narration": "找不到圣人和君子，“与其得小人，不若得愚人”：愚人想干坏事，能力不够；小人既有脑子又有胆子，就是长了翅膀的老虎。",
+      "estimatedDurationInFrames": 307,
+      "heading": "虎而翼",
+      "keywords": [
+        "小人",
+        "愚人"
+      ],
+      "background": "ink",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    },
+    {
+      "id": "s26-modern",
+      "type": "narration",
+      "narration": "开篇讲名分，结尾讲才德，说到底是一回事。用人、教育孩子，顺序都一样：先问该不该，再问能不能；先立德，再长才。",
+      "estimatedDurationInFrames": 287,
+      "heading": "先立德，再长才",
+      "keywords": [
+        "用人",
+        "教育",
+        "才德"
+      ],
+      "background": "paper",
+      "transition": {
+        "type": "fade",
+        "durationInFrames": 12
+      }
+    }
+  ]
+}
