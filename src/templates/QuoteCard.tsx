@@ -53,13 +53,31 @@ export const QuoteCard: React.FC<{shot: QuoteShot}> = ({shot}) => {
             position: 'absolute',
             left: 140,
             top: 96,
-            fontSize: 24,
-            letterSpacing: 8,
-            color: palette.ochre,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 12,
             opacity: enter,
           }}
         >
-          {shot.attribution ? `— ${shot.attribution}` : '古文金句'}
+          <div
+            style={{
+              fontSize: 24,
+              letterSpacing: 8,
+              color: palette.ochre,
+            }}
+          >
+            {shot.attribution ? `— ${shot.attribution}` : '古文金句'}
+          </div>
+          <div
+            style={{
+              fontSize: 22,
+              letterSpacing: 2,
+              color: palette.ochre,
+              opacity: 0.75,
+            }}
+          >
+            {shot.source}
+          </div>
         </div>
 
         <div
@@ -111,20 +129,6 @@ export const QuoteCard: React.FC<{shot: QuoteShot}> = ({shot}) => {
               <Seal size={116} rotate={-5} />
             </div>
           ) : null}
-        </div>
-
-        <div
-          style={{
-            position: 'absolute',
-            left: 140,
-            bottom: 92,
-            fontSize: 28,
-            letterSpacing: 3,
-            color: palette.ochre,
-            opacity: enter,
-          }}
-        >
-          —— {shot.source}
         </div>
       </AbsoluteFill>
     </PaperBackground>

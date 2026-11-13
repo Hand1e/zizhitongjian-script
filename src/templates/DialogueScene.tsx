@@ -68,7 +68,7 @@ export const DialogueScene: React.FC<Props> = ({shot, durationInFrames}) => {
             position: 'absolute',
             left: 0,
             right: 0,
-            bottom: 110,
+            bottom: 168,
             height: 2,
             background: `linear-gradient(90deg, transparent, ${palette.ink}88, transparent)`,
             opacity: enter,
@@ -83,7 +83,7 @@ export const DialogueScene: React.FC<Props> = ({shot, durationInFrames}) => {
               style={{
                 position: 'absolute',
                 left: coords[index] ?? 960,
-                bottom: 96,
+                bottom: 150,
                 transform: `translateX(-50%) scale(${isActive ? 1.02 : 0.98})`,
                 transformOrigin: 'bottom center',
                 opacity: enter,

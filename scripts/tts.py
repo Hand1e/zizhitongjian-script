@@ -143,6 +143,17 @@ def build_timeline(episode: str) -> None:
     )
 
 
+def sync_public_audio(storyboard: dict, audio_dir: Path) -> None:
+    """把音频复制到 public/audio，供 Remotion 的 staticFile 读取。"""
+    public_audio = ROOT / "public" / "audio"
+    public_audio.mkdir(parents=True, exist_ok=True)
+    for shot in storyboard["shots"]:
+        source = audio_dir / f"{shot['id']}.mp3"
+        if source.exists():
+            shutil.copyfile(source, public_audio / source.name)
+    print(f"已同步音频到 {public_audio}")
+
+
 async def main_async(args: argparse.Namespace) -> int:
     episode = args.episode
     storyboard = load_storyboard(episode)
@@ -166,6 +177,7 @@ async def main_async(args: argparse.Namespace) -> int:
         print("失败镜头：" + ", ".join(failed), file=sys.stderr)
         return 1
 
+    sync_public_audio(storyboard, audio_dir)
     if not args.no_timeline:
         build_timeline(episode)
     return 0

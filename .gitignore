@@ -1,6 +1,7 @@
 node_modules/
 out/
 episodes/*/audio/
+public/audio/
 .remotion/
 .venv/
 __pycache__/

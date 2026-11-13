@@ -134,13 +134,13 @@ export const MapScene: React.FC<{shot: MapShot; durationInFrames?: number}> = ({
             <defs>
               <marker
                 id="map-arrow"
-                markerWidth={12}
-                markerHeight={12}
-                refX={9}
-                refY={6}
+                markerWidth={10}
+                markerHeight={10}
+                refX={8}
+                refY={5}
                 orient="auto"
               >
-                <path d="M0,0 L12,6 L0,12 z" fill={palette.ink} />
+                <path d="M0,0 L10,5 L0,10 z" fill={palette.ink} />
               </marker>
               <filter id="map-soft" x="-20%" y="-20%" width="140%" height="140%">
                 <feGaussianBlur stdDeviation="8" />

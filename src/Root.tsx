@@ -1,7 +1,10 @@
 import React from 'react';
 import {Composition} from 'remotion';
+import timelineJson from '../episodes/01-sanjia-fenjin/timeline.json';
 import {CharacterPreview} from './scenes/CharacterPreview';
 import {DialoguePreview} from './scenes/DialoguePreview';
+import {END_CARD_FRAMES} from './scenes/EndCard';
+import {Episode01} from './scenes/Episode';
 import {MapPreview} from './scenes/MapPreview';
 import {RelationPreview} from './scenes/RelationPreview';
 import {ScaffoldPreview} from './scenes/ScaffoldPreview';
@@ -15,6 +18,14 @@ import {VIDEO, secondsToFrames} from './video';
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Episode01"
+        component={Episode01}
+        durationInFrames={timelineJson.totalDurationInFrames + END_CARD_FRAMES}
+        fps={VIDEO.fps}
+        width={VIDEO.width}
+        height={VIDEO.height}
+      />
       <Composition
         id="ScaffoldPreview"
         component={ScaffoldPreview}

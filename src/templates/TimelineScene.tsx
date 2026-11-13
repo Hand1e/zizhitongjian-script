@@ -148,19 +148,6 @@ export const TimelineScene: React.FC<{shot: TimelineShot}> = ({shot}) => {
             );
           })}
         </svg>
-
-        <div
-          style={{
-            position: 'absolute',
-            bottom: 100,
-            fontSize: 24,
-            letterSpacing: 4,
-            color: palette.ochre,
-            opacity: 0.7 * enter,
-          }}
-        >
-          距今约两千四百年 · 示意图
-        </div>
       </AbsoluteFill>
     </PaperBackground>
   );

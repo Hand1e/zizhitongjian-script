@@ -197,3 +197,28 @@
 - `npm run typecheck` 通过
 - 静帧：`out/stills/relation-before.png`、`out/stills/relation-after.png`
 - 人工检查：智-韩/魏由蓝转红，韩/魏-赵保持蓝色
+
+## 2026-11-13 — 阶段 10：主 Composition
+
+### 新增
+
+- `src/scenes/Episode.tsx`：读取 `storyboard.json` + `timeline.json`，按帧号拼接 27 个镜头
+  - 每个镜头挂载自己的 `Audio`（`staticFile`），画面与配音同帧开始
+  - 句级字幕：白色 + 黑色描边，按 timeline 的字幕帧显示/淡入淡出
+  - 转场：fade（淡入淡出）与 scroll（卷轴展开），镜头尾部统一淡出
+  - 右上角常驻片名水印
+- `src/scenes/EndCard.tsx`：5 秒片尾占位（“下集预告”“战国序幕·敬请期待”“本账号名称（占位）”）
+- `Episode01` Composition：`timeline.totalDurationInFrames + 150` 帧
+- `scripts/tts.py` 生成音频后同步复制到 `public/audio/`，供 `staticFile` 读取；该目录不提交
+
+### 验证
+
+- `npm run typecheck` 通过
+- 主 Composition 抽样静帧：`out/stills/ep-title.png`、`ep-quote.png`、`ep-map.png`、`ep-dialogue.png`、`ep-relation.png`、`ep-timeline.png`、`ep-narration.png`、`ep-end.png`
+- 短片段渲染测试：`out/test-audio.mp4`（前 120 帧），ffprobe 确认 h264 视频 + aac 音频两条流
+- 修正字幕遮挡：字幕缩到 40px / 5px 描边；引文出处移到左上；对话人物名上移；时间轴去掉底部说明
+
+### 说明
+
+- 正片时间轴 252.733 秒，片尾 5 秒，`Episode01` 总长 257.733 秒
+- 阶段 11 的“时长与配音一致”检查将按正片（不含片尾）对比
