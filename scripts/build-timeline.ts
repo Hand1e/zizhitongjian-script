@@ -17,8 +17,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const FPS = 30;
 const WIDTH = 1920;
 const HEIGHT = 1080;
-/** 每个镜头尾部留一点静音，避免旁白首尾相撞 */
-const TAIL_PADDING_FRAMES = 6;
+/** 每个镜头尾部留白；设为 0 保证成片时长与配音严格一致 */
+const TAIL_PADDING_FRAMES = 0;
 
 const require = createRequire(import.meta.url);
 
@@ -111,6 +111,13 @@ function resolveFfprobe(): string {
 }
 
 const ffprobe = resolveFfprobe();
+const ffmpeg =
+  ffprobe === 'ffprobe'
+    ? 'ffmpeg'
+    : join(
+        dirname(ffprobe),
+        process.platform === 'win32' ? 'ffmpeg.exe' : 'ffmpeg',
+      );
 
 function audioDurationSeconds(audioPath: string): number {
   const output = execFileSync(
@@ -218,6 +225,40 @@ const timeline = {
 };
 
 writeFileSync(outputPath, `${JSON.stringify(timeline, null, 2)}\n`, 'utf8');
+
+// 把所有镜头音频拼成一条 full.mp3，Composition 只需挂一个 Audio，
+// 避免长片渲染时几十个音频元素同时预加载导致卡住。
+const publicAudioDir = join(ROOT, 'public', 'audio');
+const concatList = join(publicAudioDir, 'full.txt');
+const fullAudio = join(publicAudioDir, 'full.mp3');
+const lines: string[] = [];
+for (const shot of timelineShots) {
+  const source = join(publicAudioDir, `${shot.id}.mp3`);
+  if (!existsSync(source)) {
+    throw new Error(`public/audio 缺少 ${shot.id}.mp3，请先运行 npm run tts -- ${episode}`);
+  }
+  lines.push(`file '${source.replace(/\\/g, '/')}'`);
+}
+writeFileSync(concatList, `${lines.join('\n')}\n`, 'utf8');
+execFileSync(
+  ffmpeg,
+  [
+    '-hide_banner',
+    '-loglevel',
+    'error',
+    '-y',
+    '-f',
+    'concat',
+    '-safe',
+    '0',
+    '-i',
+    concatList,
+    '-c',
+    'copy',
+    fullAudio,
+  ],
+  {stdio: 'inherit'},
+);
 
 const totalAudio = timelineShots.reduce(
   (sum, shot) => sum + (shot.durationInFrames - TAIL_PADDING_FRAMES) / FPS,

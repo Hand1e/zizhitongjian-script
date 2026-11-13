@@ -260,20 +260,6 @@
           "label": "攻赵",
           "kind": "attack",
           "progress": 1
-        },
-        {
-          "from": "han",
-          "to": "zhao",
-          "label": "",
-          "kind": "march",
-          "progress": 1
-        },
-        {
-          "from": "wei",
-          "to": "zhao",
-          "label": "",
-          "kind": "march",
-          "progress": 1
         }
       ],
       "transition": {

@@ -167,6 +167,7 @@ const HeaderMark: React.FC = () => (
 export const Episode01: React.FC = () => {
   return (
     <AbsoluteFill style={{backgroundColor: palette.paper}}>
+      <Audio src={staticFile('audio/full.mp3')} />
       {timelineJson.shots.map((timelineShot) => {
         const shot = shotById.get(timelineShot.id);
         if (!shot) {
@@ -184,7 +185,6 @@ export const Episode01: React.FC = () => {
             >
               <ShotView shot={shot} durationInFrames={timelineShot.durationInFrames} />
             </ShotTransition>
-            <Audio src={staticFile(timelineShot.audio)} />
           </Sequence>
         );
       })}

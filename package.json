@@ -12,10 +12,12 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "render": "remotion render",
+    "render": "tsx scripts/render.ts",
     "still": "remotion still",
     "tts": "python scripts/tts.py",
-    "timeline": "tsx scripts/build-timeline.ts"
+    "timeline": "tsx scripts/build-timeline.ts",
+    "verify": "tsx scripts/verify-render.ts",
+    "check:frames": "python scripts/check-frames.py"
   },
   "dependencies": {
     "@remotion/cli": "4.0.543",

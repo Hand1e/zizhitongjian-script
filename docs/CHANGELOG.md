@@ -121,13 +121,13 @@
 ### 新增
 
 - `scripts/tts.py`：读取 `storyboard.json`，逐镜头调用 edge-tts（`zh-CN-YunjianNeural`，`+8%`，SentenceBoundary），生成 `episodes/<id>/audio/<shot>.mp3` 与同名 json 时间戳；3 并发、失败重试、已有音频自动跳过、完成后自动调用时间轴脚本
-- `scripts/build-timeline.ts`：用 ffprobe 读取每个 mp3 的实际时长，生成 `timeline.json`；包含镜头起止帧、句级字幕、全片总时长；每个镜头尾部留 6 帧静音
+- `scripts/build-timeline.ts`：用 ffprobe 读取每个 mp3 的实际时长，生成 `timeline.json`；包含镜头起止帧、句级字幕、全片总时长；镜头时长严格等于音频时长（不留尾帧），并额外拼出一条 `public/audio/full.mp3` 供 Composition 使用
 - `npm run tts -- 01-sanjia-fenjin` 一条命令完成「配音 + 时间轴」
 - `src/timeline.test.ts`：校验镜头顺序、帧号连续、总时长与帧率一致、字幕都在镜头范围内
 
 ### 生成结果
 
-- 27 个镜头全部生成，配音总长 247.3 秒，成片时间轴 252.733 秒（7582 帧，4 分 12 秒）
+- 27 个镜头全部生成，配音总长 247.3 秒，成片时间轴 247.333 秒（7420 帧，4 分 07 秒）
 - 音频在 `episodes/01-sanjia-fenjin/audio/`，按约定不提交；`timeline.json` 提交，供 Composition 直接读取
 - 实际语速比预估慢，成片比 3.5 分钟长约 40 秒；阶段 12 复查时再决定是否调整 rate
 
@@ -220,5 +220,60 @@
 
 ### 说明
 
-- 正片时间轴 252.733 秒，片尾 5 秒，`Episode01` 总长 257.733 秒
+- 正片时间轴 247.333 秒，片尾 5 秒，`Episode01` 总长 252.333 秒（实际拼接 252.441 秒）
 - 阶段 11 的“时长与配音一致”检查将按正片（不含片尾）对比
+
+## 2026-11-13 — 阶段 11：渲染成片
+
+### 新增
+
+- `scripts/render.ts`：`npm run render -- 01-sanjia-fenjin`，默认按 600 帧分片渲染、失败重试、ffmpeg 无损拼接；`--single` 可整段渲染
+- `scripts/verify-render.ts`：`npm run verify -- 01-sanjia-fenjin`，ffprobe 检查分辨率/帧率/音视频流/时长，抽 28 帧到 `out/frames/`，写 `out/render-report.json`
+- `scripts/check-frames.py`：`npm run check:frames`，检查抽帧是否空白、纯色、贴边，写 `out/frame-report.json`
+- `public/audio/full.mp3`：27 段配音拼成一条音轨，避免长片渲染时多个 Audio 元素卡住
+
+### 成片
+
+- `out/01-sanjia-fenjin.mp4`：1920×1080、30fps、h264 + aac，252.441 秒（正片 247.441 秒 + 片尾 5 秒），54.7 MB
+- 正片与 `timeline.json` 误差 0.108 秒（阈值 0.5 秒）
+- 抽帧 28 张，自动检查 28/28 通过
+
+### 验证
+
+- `npm run typecheck`、`npm test` 通过
+- `npm run verify -- 01-sanjia-fenjin` 通过
+- `npm run check:frames` 通过
+
+## 2026-11-13 — 阶段 12：自查打磨
+
+### 新增
+
+- `docs/REVIEW.md`：自动检查结果、28 张抽帧逐镜头结论、问题与修复、剩余限制、人工查看入口
+- 联系帧：`out/contact-sheet.png`
+
+### 修复
+
+- 字幕遮挡引文出处/人物姓名 → 出处移到左上、人物上移、字幕改为 40px/5px 描边
+- 竖排引文按字宽断列 → 按标点切块，每列最多 9 字；重渲染 `s03/s07/s18/s24`
+- `s15` 三支箭头重叠 → 只保留智→赵一支“攻赵”；重渲染对应分片
+- 时间轴底部说明与字幕重叠 → 移除说明
+- 长片整段渲染卡死 → 600 帧分片 + 单音轨 + 重试
+
+### 验证
+
+- 重新拼接后：252.441 秒，正片误差 0.108 秒
+- 28/28 抽帧通过自动检查；逐镜头结论见 `docs/REVIEW.md`
+
+## 2026-11-13 — 阶段 13：可复用化
+
+### 新增
+
+- `docs/NEW_EPISODE.md`：新一集从写稿、分镜、配音、接 Composition、渲染到检查的完整步骤
+- README 更新：环境要求、常用命令、目录结构、制作流程、成片检查命令
+- DeepSeek 提示词模板：直接复用第一集的 script/storyboard 规范生成新一集
+
+### 说明
+
+- 新集需要：新增 episode 目录、写 script/sources/storyboard、复制并改 `EpisodeXX.tsx`、在 `Root.tsx` 与 `scripts/render.ts` 登记
+- 配音参数、生成物忽略规则、常见问题都写进 `docs/NEW_EPISODE.md`
+- `TASK.md` 阶段 13 已打勾
